@@ -170,12 +170,13 @@ if __name__ == "__main__":
         print(df_clean[col].value_counts().head(10))
 
     # Сохранение обработанных данных
-    output_filename = 'pdb_data_cleaned.csv'
-    df_clean.to_csv(output_filename, index=False)
+    output_filename = 'pdb_data_cleaned.parquet'
+    df_clean.to_parquet(output_filename, index=False)
     print(f"\nОбработанные данные сохранены в файл: {output_filename}")
 
     # Демонстрация нескольких строк обработанных данных
     print("\n=== ПЕРВЫЕ 5 СТРОК ОБРАБОТАННЫХ ДАННЫХ ===")
     pd.set_option('display.max_columns', None)
     print(df_clean.head())
+
 
