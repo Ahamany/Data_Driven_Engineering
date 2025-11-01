@@ -1,6 +1,8 @@
-Ссылка на датасет: https://drive.google.com/file/d/1aXF6kBAxg2cA-j0MSgPzUoL4QQiDoJVK/view?usp=sharing - cобирала данные с сайта PubChem через API.
+Data_Driven_Engineering
+Репозиторий проекта ITMO Data Driven Engineering.
 
-Датасет с платформы Kaggle: https://drive.google.com/file/d/1ZAaB3w-ssykhQXt8ikc9w4RM3seucxpQ/view?usp=sharing.
+Набор данных содержит информацию об аминокислотных последовательностях белков и их свойствах из Protein Data Bank
+Link: https://docs.google.com/spreadsheets/d/1_RF8CV2Ej1UKbFwhVzy3kx5Q41cvHS62_0Is_Yv5YUU/edit?usp=sharing
 
 # Project Structure
 ```
@@ -9,7 +11,7 @@ my_project/
 |--- notebooks/
 |    |___ EDA.py
 |
-|--- src/
+|--- etl/
 |    |--- __init__.py
 |    |--- extract.py
 |    |--- load.py
@@ -19,16 +21,20 @@ my_project/
 |--- .gitignore
 |--- poetry.lock
 |--- pyproject.toml
+|___ write_to_db.py
+|--- data_loader.py
 |___ README.md
 ```
 
 # Создание переменного окружения (conda + poetry)
-Для загрузки miniconda через Homebrew:
-```brew install --cask miniconda```
+Для загрузки miniconda (Windows):
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -o .\miniconda.exe
+start /wait "" .\miniconda.exe /S
+del .\miniconda.exe
 
 ### Создание виртуального окружения и активация c помощью Conda:
 * ```conda create -n my_env python=3.13 pip```
-* Инициализируем все поддерживаемые оболочки: ```conda init --all``` -> открыть новый терминал
+* Инициализируем conda: ```conda init``` -> открыть новый терминал
 * ```conda activate my_env```
 
 Посмотреть существующие виртуальные окружения:
@@ -41,12 +47,12 @@ my_project/
 * ```poetry add jupyterlab pandas matplotlib wget``` - добавление новых зависимостей в проект
 * ```poetry install --no-root``` - установка всех библиотек из pyproject.toml
 
-Скрипт выгрузки файла из Google Drive и вывод на экран первых 10 строк лежит в ```src/experiments/data_loader.py```
+Скрипт выгрузки файла из Google Drive и вывод на экран первых 10 строк лежит в ```data_loader.py```
 
-Также в этом файле представлено приведение типов и сохранение в формат .csv
+Также в этом файле представлено приведение типов и сохранение в формат .csv и .parcuet
 
 Запуск скрипта:
-```python3 src/experiments/data_loader.py```
+```python3 data_loader.py```
 
 Ниже представлен скриншот первых 10 строк датафрейма:
 ![data_cardiovascular_risk](photo/df_head(10).png)
