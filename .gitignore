@@ -2,7 +2,12 @@ db/
 data/
 local/
 
-**/.env
-**/.DS_Store
-**/*.csv
-**/__pycache__/
+/.env
+/.DS_Store
+/.csv
+/__pycache__/
+/.parquet
+/.xls
+/creds.db
+/env/
+/venv/
