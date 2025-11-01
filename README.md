@@ -29,12 +29,12 @@ my_project/
 
 # Создание переменного окружения (conda + poetry)
 Для загрузки miniconda (Windows):
-url https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -o .\miniconda.exe
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -o .\miniconda.exe
 start /wait "" .\miniconda.exe /S
 del .\miniconda.exe
 
 ### Создание виртуального окружения и активация c помощью Conda:
-* ```conda create -n my_env python=3.13 pip```
+* ```conda create -n my_env python=3.13```
 * Инициализируем conda: ```conda init``` -> открыть новый терминал
 * ```conda activate my_env```
 
@@ -45,7 +45,7 @@ del .\miniconda.exe
 * Устанавливаем poetry ```pip install poetry```
 * Создание пакета my_project в my_project: ```poetry new my_project```
 * ```cd my_project``` - переход в директорию
-* ```poetry add jupyterlab pandas matplotlib wget``` - добавление новых зависимостей в проект
+* ```poetry add jupyterlab pandas matplotlib``` - добавление новых зависимостей в проект
 * ```poetry install --no-root``` - установка всех библиотек из pyproject.toml
 
 Скрипт выгрузки файла из Google Drive и вывод на экран первых 10 строк лежит в ```data_loader.py```
@@ -56,7 +56,7 @@ del .\miniconda.exe
 ```python3 data_loader.py```
 
 Ниже представлен скриншот первых 10 строк датафрейма:
-![data_cardiovascular_risk](photo/df_head(10).png)
+<img width="563" height="248" alt="image" src="https://github.com/user-attachments/assets/d4c65ed5-20cc-4b0f-8a3b-7d9624d52402" />
 
 <details>
 <summary>Итоговые типы столбцов</summary>
