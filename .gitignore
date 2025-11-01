@@ -1,0 +1,8 @@
+db/
+data/
+local/
+
+**/.env
+**/.DS_Store
+**/*.csv
+**/__pycache__/
