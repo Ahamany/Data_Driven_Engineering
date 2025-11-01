@@ -14,29 +14,6 @@
   - Далее — выбранные почасовые показатели (например):  
     `temperature_2m`, `relative_humidity_2m`, `wind_speed_10m`, `precipitation`, `cloud_cover` и др.
 
-## Установка и запуск
-1. Python 3.10+
-2. Установка зависимостей:
-   ```bash
-   pip install requests pandas
-   ```
-3. Примеры запуска:
-   ```bash
-   # По умолчанию: Нью-Йорк, только temperature_2m → processed/weather_hourly.csv
-   python3 api_reader.py
-
-   # Москва, несколько показателей, конкретные даты и таймзона
-   python3 api_reader.py \
-     --latitude 55.7558 --longitude 37.6176 \
-     --hourly temperature_2m,relative_humidity_2m,wind_speed_10m \
-     --start 2025-11-01 --end 2025-11-02 \
-     --timezone Europe/Moscow
-
-   # Санкт-Петербург, осадки и облачность
-   python3 api_reader.py \
-     --latitude 59.9311 --longitude 30.3609 \
-     --hourly precipitation,cloud_cover
-   ```
 
 ## Параметры CLI
 - `--latitude`, `--longitude` — координаты точки наблюдения.
@@ -47,5 +24,4 @@
 
 ## Примечания
 - API не требует ключей и работает без авторизации.
-- Если какая-то из запрошенных переменных недоступна, скрипт всё равно создаст столбец с пустыми значениями, сохранив структуру таблицы.
 - В терминал выводится краткий превью датафрейма и единицы измерения (`hourly_units`), если они есть в ответе API.
