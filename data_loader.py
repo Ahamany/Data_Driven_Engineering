@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-FILE_ID = "16khQQ4-SW6tCEDuxzqiIa9_bpzjw3V7p"  # ID файла на Google Drive
+FILE_ID = "1KUued6tNXsTQz9-uWafdIrrXo5ZfeUFK"  # ID файла на Google Drive
 file_url = f"https://drive.google.com/uc?id={FILE_ID}"
 df = pd.read_csv(file_url)  # загрузка файла
 
@@ -10,7 +10,7 @@ print(raw_data.head(10))         # выводим на экран первые 1
 
 def clean_and_convert_pdb_data(df):
     """
-    Функция для очистки и приведения типов данных в датасете
+    Функция для очистки и приведения типов данных в датасете PDB
     """
 
     # Создаем копию датафрейма для работы
@@ -122,9 +122,8 @@ def clean_and_convert_pdb_data(df):
     for col in int_columns:
         if col in df_clean.columns:
             df_clean[col] = pd.to_numeric(df_clean[col], errors='coerce').astype('Int64')
-
+    df_clean.columns = ['id'] + list(df_clean.columns[1:])
     return df_clean
-
 
 def analyze_data_types(df):
     """
@@ -177,6 +176,3 @@ if __name__ == "__main__":
     print("\n=== ПЕРВЫЕ 5 СТРОК ОБРАБОТАННЫХ ДАННЫХ ===")
     pd.set_option('display.max_columns', None)
     print(df_clean.head())
-
-
-
