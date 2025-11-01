@@ -69,23 +69,23 @@ del .\miniconda.exe
 
 Запуск (форматирование кода):
 
-```poetry run black src/experiments/data_loader.py```
+```poetry run black data_loader.py```
 
 ### Загрузка датасета в базу данных
 Запуск скрипта:
-```python3 src/experiments/write_to_db.py```
+```python3 write_to_db.py```
 
 ### Рендер ноутбука 
 [Ноутбук с EDA](https://nbviewer.org/github/Margo2512/data_driven_engineering/blob/main/notebooks/EDA.ipynb)
 
 ### Пакет etl
-Поддерживает аргументы командной строки, `python3 src/etl/main.py --help` чтобы посмотреть доступные.
+Поддерживает аргументы командной строки, `python3 etl/main.py --help` чтобы посмотреть доступные.
 
 Запуск всего ETL пайплайна с загрузкой в базу данных
-`python3 src/etl/main.py etl --file_id <file_id>`
+`python3 etl/main.py etl --file_id <file_id>`
 
 Проверка таблицы в базе данных и вывод нескольких первых значений
-`python3 src/etl/main.py validate_db`
+`python3 etl/main.py validate_db`
 
 Необходимо указать такие переменные окружения:
 - DB_USER
