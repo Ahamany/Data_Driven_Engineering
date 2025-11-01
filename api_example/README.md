@@ -1,6 +1,6 @@
 # API → Pandas Example (Open‑Meteo)
 
-**Выбранный API:** Open‑Meteo (без авторизации, бесплатный)  
+**Выбранный API:** Open‑Meteo  
 **Ссылка:** `https://api.open-meteo.com/v1/forecast` с параметром `hourly`  
 
 ## Что делает скрипт
