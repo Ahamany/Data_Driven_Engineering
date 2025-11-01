@@ -29,9 +29,7 @@ my_project/
 
 # Создание переменного окружения (conda + poetry)
 Для загрузки miniconda (Windows):
-curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -o .\miniconda.exe
-start /wait "" .\miniconda.exe /S
-del .\miniconda.exe
+(curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -o .\miniconda.exe start /wait "" .\miniconda.exe /S del .\miniconda.exe)
 
 ### Создание виртуального окружения и активация c помощью Conda:
 * ```conda create -n my_env python=3.13```
