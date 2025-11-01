@@ -56,12 +56,13 @@ del .\miniconda.exe
 ```python3 data_loader.py```
 
 Ниже представлен скриншот первых 10 строк датафрейма:
+
 <img width="563" height="248" alt="image" src="https://github.com/user-attachments/assets/d4c65ed5-20cc-4b0f-8a3b-7d9624d52402" />
 
-<details>
-<summary>Итоговые типы столбцов</summary>
-<img src="photo/df_types.png" alt="drawing" width="200"/>
-</details>
+Итоговые типы столбцов
+
+<img width="466" height="598" alt="image" src="https://github.com/user-attachments/assets/bfafd95a-21e9-4914-a32c-703b64e0df5c" />
+
 
 ### black
 Установка: ```poetry add --group dev black```
