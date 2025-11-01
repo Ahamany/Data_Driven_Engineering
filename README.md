@@ -76,7 +76,7 @@ del .\miniconda.exe
 ```python3 write_to_db.py```
 
 ### Рендер ноутбука 
-[Ноутбук с EDA](https://nbviewer.org/github/Margo2512/data_driven_engineering/blob/main/notebooks/EDA.ipynb)
+[Ноутбук с EDA](https://github.com/Ahamany/Data_Driven_Engineering/blob/main/notebooks/EDA.ipynb)
 
 ### Пакет etl
 Поддерживает аргументы командной строки, `python3 etl/main.py --help` чтобы посмотреть доступные.
